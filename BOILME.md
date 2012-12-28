@@ -1,12 +1,15 @@
-YOUR_PLUGIN
+PLUGIN_NAME
 ===========
 
-
-
-Description
------------
-
 PLUGIN_DESCRIPTION
+
+License
+-------
+
+LEGAL_LICENSE
+LEGAL_NOTICE
+LEGAL_COPYRIGHT
+
 
 
 
