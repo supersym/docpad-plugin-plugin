@@ -1,34 +1,37 @@
 {
-    "name": "docpad-plugin-YOUR_PLUGIN",
-    "version": "1.0.0",
-    "description": "DocPad plugin which adds the ability to render Something to Something Else.",
-    "homepage": "https://github.com/YOUR_GITHUB_USERNAME/docpad-plugin-YOUR_PLUGIN",
-    "keywords": [
-        "docpad",
-        "docpad-plugin",
-        "something",
-        "somethingElse"
-    ],
-    "author": "Name <email> (url)",
-    "maintainers": [
-        "Name <email> (url)",
-    ],
-    "contributors": [
-        "Name <email> (url)",
-    ],
-    "bugs": {
-        "url": "https://github.com/YOUR_GITHUB_USERNAME/docpad-plugin-YOUR_PLUGIN/issues"
-    },
-    "repository" : {
-        "type": "git",
-        "url": "http://github.com/YOUR_GITHUB_USERNAME/docpad-plugin-YOUR_PLUGIN.git"
-    },
-    "engines" : {
-        "node": ">=0.6.0",
-        "docpad": "6.x"
-    },
-    "dependencies": {
-        "something": "1.0.x"
-    },
-    "main": "./YOUR_PLUGIN.plugin.coffee"
+  "name"        : "docpad-plugin-plugins",
+  "description" : "DocPad plugin which streamlines the effort of developing plugins in a structured manner.",
+  "homepage"    : "https://github.com/supersym/docpad-plugin-plugins",
+  "version"     : "1.0.0",
+  "keywords"    : [ "docpad-plugin", "plugins", "docpad", "workflow", "docpad development" ],
+  "author"      : "Rob Jentzema <maildumpert@gmail.com> (hack.co.nl)",
+  "maintainers" : [ "Rob Jentzema <maildumpert@gmail.com> (hack.co.nl)" ],
+  "dependencies": {
+    "coffee-script"     :     "latest",
+    "commander"         :     "latest",
+    "custom-logger"     :     "latest",
+    "namespace.coffee"  :     "https://github.com/CodeCatalyst/namespace.coffee/tarball/master"
+  },
+  "bin": {
+    "docpad-plugin": "./bin/docpad-plugins"
+  },
+  "scripts": {
+    "start"     : "node ./bin/docpad-plugins init",
+    "test"      : "vows --spec --isolate",
+    "predeploy" : "echo The predeploy event is fired!",
+    "postdeploy": "echo We've finished deploying this app..."
+  },
+  "main": "./lib/docpad-plugins.plugin.js",
+  "bugs": {
+    "url": "https://github.com/supersym/docpad-plugin-plugins/issues"
+  },
+  "repository": {
+    "type"    : "git",
+    "url"     : "http://github.com/supersym/docpad-plugin-plugins.git"
+  },
+  "engines": {
+    "node"    : ">=0.6.0",
+    "docpad"  : "6.x"
+  },
+  "license": "MIT"
 }
