@@ -1,0 +1,117 @@
+# Literate programming ideas illustrated in CoffeeScript Object Notation (CSON)
+
+### styleguide
+
+##
+#
+## subtitle
+# by explaining some of the facts that got abstracted away due to dependency
+# chains of programs and illustrate some of the logic of the underlying layers
+# of Node.js, the `npm` package manager, the node DocPad program as stand-alone
+# local running process (the application) or used as a modular component for any
+# other software like Express.js or Connect middleware framework.
+
+# For this to succeed I must be extremely vigilant and persistent in my quest
+# for aesthetics, code elegance and the fun using principles from the movements
+# of eXtreme programming, OOP and DDD/TDD schools etc.
+
+# Preamble
+# ========
+
+# Licensed under the `MIT Public License` currently,  all rights reserved
+# (this may change in the future)
+#
+# Created by Supersym in januari 2013
+
+# See the file footer for license information, check the file called LICENSE.md
+# or check for optional `LEGAL.md` to read a more in-depth legal scoped article
+
+# `CoffeeScript` is result of the initial creative work of Jeremy Ashkenas and
+# `CSON` is the brain-child of B.A. Lupton who wrote this parser: thanks both!
+#
+# Both are also licensed under versions of the 'MIT' public license concept
+
+# Basic information
+# -----------------
+
+## For newbies
+
+# This file contains both (a) code for computer programs as well as the more
+# informative (b) comments which you may recognize by the character used to
+# start a new line in this file, denoted by the sign known under the names
+# 'hash', 'bash', 'dash' or 'pound' the  literal '#' character.
+
+# This tells the program that reads this file to not bother and try
+# interpreting what comes next, natural text intended for humans to read and
+# written in standard English language to descript properties of this file,
+# it's relation to Node.js, node packages, the package manager and any facts
+# or major design principles that should be followed.
+
+
+
+
+### Overview #
+#
+# All npm packages contain a file, usually in the project root, called
+# package.json and it must be actual JSON, not just a JavaScript object literal.
+#
+# @see https://npmjs.org/doc/json.html
+# @see http://package.json.nodejitsu.com
+#
+# This file was written in CSON, CoffeeScript Object Notation
+# It is used to generate a parsable `package.json` file
+#
+
+
+###
+
+name:                'my-npm-defined-application'
+description:         "This value is used to provide some prime descriptions."
+author:              "Your (real/alias) names, email and/or URI site reference."
+version:             "1.0.0"
+tags:                [ "docpad", "docpad-plugin", "hooks", "plugin", "async" ]
+licenses:            [ type: "MIT Public License" ]
+directories:         lib : "./lib", bin : "./bin", src : "./src", out : "./out"
+main :               "./lib/bin/docpad-plugins.js"
+homepage:            "https://github.com/supersym/docpad-plugin-plugins"
+bugs:                "https://github.com/supersym/docpad-plugin-plugins/issues"
+bin:                 dpplug: "./bin/docpad-plugins"
+
+engines:
+    node:            ">=0.6.x"
+    docpad:          "6.x"
+
+###
+Dependency trees
+In software engineering, coupling or dependency is the degree to which each program module relies on each one of the other modules.
+In the Node.js package manager, dependencies are specified with a simple hash of package name to version range.
+The version range is EITHER a string which has one or more space-separated descriptors, OR a range like "fromVersion - toVersion"
+###
+
+devDependencies:
+    backbone:        "0.9.x"
+    browserify:      "1.10.x"
+    "coffee-script": "1.3.x"
+    "jasmine-node":  "1.0.x"
+    mocha:           "1.1.0"
+    should:          "0.6.x"
+    supervisor:      "0.3.x"
+    underscore:      "1.3.x"
+
+repository:
+    type:            "git"
+    url:             "git://github.com/supersym/docpad-plugin-plugins"
+
+#-------------------------------------------------------------------------------
+# Copyright (c) 2012 Patrick Mueller
+#
+# Tumbolia Public License
+#
+# Copying and distribution of this file, with or without modification, are
+# permitted in any medium without royalty provided the copyright notice and this
+# notice are preserved.
+#
+# TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+#
+#   0. opan saurce LOL
+#-------------------------------------------------------------------------------

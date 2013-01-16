@@ -1,0 +1,56 @@
+@startuml
+scale 900 width
+
+enum Paradigms {
+  ASPECT_ORIENTED
+  DECLARATIVE
+  GENERIC
+  INTENSIONAL
+  LITERATE
+  OBJECT_ORIENTED
+  PATTERN_MATCHING
+  PROTOTYPE_BASED
+  SERVICE_ORIENTED
+}
+
+
+
+class MMD as "MultiMarkdown (MMD)" <? extends SM> {
+ <b>cat:</b> lightweight markup languages
+ <b>input:</b> minimally marked-up plain text
+ <b>output:</b> well-formed documents
+.. Appraisal ..
++ Convertibility or compatibility (good)
+
+.. Direct output formats ..
+Single file can easily convert into:
+* HTML/XHTML
+* LaTeX which can be processed into PDF
+* OpenDocument Text Document
+* OPML Outline Processor Markup Language XML
+}
+
+class SM as "standard Markdown (SM)" {
+.. Properties ..
+ <b>input:</b> plain ASCII/Text guaranteed to work
+ <b>output:</b> depends really... just text
+
+.. Goal / features ..
+* intended to be as easy-to-read
+* intended easy-to-write as is feasible
+* readability emphasized above all else
+}
+
+' relationships between languages
+SM <|-- MMD : < extends
+SM <|-- GFM
+Class05 o-- Class06
+Class07 .. Class08
+Class09 -- Class10
+Class11 <|.. Class12
+Class13 --> Class14
+Class15 ..> Class16
+Class17 ..|> Class18
+Class19 <--* Class20
+@enduml
+
